@@ -4,4 +4,4 @@ USER root
 
 # Change your version here
 RUN sudo update-alternatives --set php $(which php7.3)
-RUN sudo apt-get install php-gd
+RUN /etc/php/7.3/cli/php.ini << "extension=pdo_mysql"
